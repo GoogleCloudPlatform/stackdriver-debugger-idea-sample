@@ -27,7 +27,8 @@ public class HelloBrowserServlet extends HttpServlet {
 
     String userAgent = request.getHeader("UserAgent");
     String displayName = "Browser";
-
+    String data = request.toString();
+    
     if (userAgent != null) {
       if (userAgent.contains("Mozilla")) {
         displayName = "Firefox"; 
