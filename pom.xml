@@ -6,10 +6,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <groupId>com.google.gct.idea.sample</groupId>
-    <artifactId>cloudtools-idea-sample-71</artifactId>
+    <artifactId>hellobrowser</artifactId>
 
     <properties>
-        <app.id>cloudtools-idea-sample-71</app.id>
+        <app.id>hellobrowser</app.id>
         <app.version>1</app.version>
         <appengine.version>1.9.30</appengine.version>
         <gcloud.plugin.version>2.0.9.89.v20151202</gcloud.plugin.version>
