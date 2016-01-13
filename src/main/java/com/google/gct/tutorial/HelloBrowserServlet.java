@@ -25,9 +25,8 @@ public class HelloBrowserServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-    String userAgent = request.getHeader("UserAgent");
+    String userAgent = request.getHeader("User-Agent");
     String displayName = "Browser";
-    String data = request.toString();
     
     if (userAgent != null) {
       if (userAgent.contains("Mozilla")) {

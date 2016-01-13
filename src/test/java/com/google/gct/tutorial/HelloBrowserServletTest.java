@@ -12,7 +12,7 @@ public class HelloBrowserServletTest {
   @Test
   public void testChrome() throws IOException {
     StubHttpServletRequest request = new StubHttpServletRequest();
-    request.setHeader("UserAgent", "Chrome");
+    request.setHeader("User-Agent", "Chrome");
     SpyHttpServletResponse response = new SpyHttpServletResponse();
     servlet.doGet(request, response);
     Assert.assertTrue(response.getBody().contains("Hello Chrome"));
@@ -21,7 +21,7 @@ public class HelloBrowserServletTest {
   @Test
   public void testSafari() throws IOException {
     StubHttpServletRequest request = new StubHttpServletRequest();
-    request.setHeader("UserAgent", "Safari");
+    request.setHeader("User-Agent", "Safari");
     SpyHttpServletResponse response = new SpyHttpServletResponse();
     servlet.doGet(request, response);
     Assert.assertTrue(response.getBody().contains("Hello Safari"));
@@ -30,10 +30,28 @@ public class HelloBrowserServletTest {
   @Test
   public void testFirefox() throws IOException {
     StubHttpServletRequest request = new StubHttpServletRequest();
-    request.setHeader("UserAgent", "Firefox");
+    request.setHeader("User-Agent", "Firefox");
     SpyHttpServletResponse response = new SpyHttpServletResponse();
     servlet.doGet(request, response);
     Assert.assertTrue(response.getBody().contains("Hello Firefox"));
+  }
+  
+  @Test
+  public void testOpera() throws IOException {
+    StubHttpServletRequest request = new StubHttpServletRequest();
+    request.setHeader("User-Agent", "Opera");
+    SpyHttpServletResponse response = new SpyHttpServletResponse();
+    servlet.doGet(request, response);
+    Assert.assertTrue(response.getBody().contains("Hello Opera"));
+  }
+  
+  @Test
+  public void testLynx() throws IOException {
+    StubHttpServletRequest request = new StubHttpServletRequest();
+    request.setHeader("User-Agent", "Lynx");
+    SpyHttpServletResponse response = new SpyHttpServletResponse();
+    servlet.doGet(request, response);
+    Assert.assertTrue(response.getBody().contains("Hello Lynx"));
   }
 
 }
