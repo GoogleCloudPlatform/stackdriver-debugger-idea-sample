@@ -43,8 +43,7 @@ public class HelloBrowserServlet extends HttpServlet {
         displayName = userAgent; 
       }
     }
-
-    //test
+    
     response.setContentType("text/html");
     PrintWriter writer = response.getWriter();
 
